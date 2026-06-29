@@ -1,0 +1,40 @@
+public class Samsung{
+	String model;
+	String processor;
+	int memory;
+	int price;
+   
+     static String brand="Samsung";
+ public static void main(String[] args){
+	
+ 	Samsung s25=new Samsung();
+	s25.model="s25";
+	s25.processor="exynos 2100";
+	s25.memory=128;
+	s25.price=71000;
+	
+	Samsung s25Ultra=new Samsung();
+	s25Ultra.model="s25Ultra";
+	s25Ultra.processor="exynos 2400";
+	s25Ultra.memory=256;
+	s25Ultra.price=109999;
+System.out.println("******"+(Samsung.brand)+"*****");	
+System.out.println(s25.model);
+System.out.println(Samsung.brand);
+System.out.println(s25.processor);
+System.out.println(s25.memory);
+System.out.println(s25.price);
+System.out.println(s25Ultra.model);
+System.out.println(s25Ultra.processor);
+System.out.println(s25Ultra.memory);
+System.out.println(s25Ultra.price);
+
+Samsung.brand="iphone";
+System.out.println("******"+(Samsung.brand)+"*****");	
+
+//this will give an error while running since final cant be changed and here the memory location and value remains constant
+
+	
+	}
+}
+	
