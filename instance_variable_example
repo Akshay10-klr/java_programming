@@ -1,0 +1,22 @@
+public class Employee{
+	String name;
+	int id;
+
+  public static void main(String[] args){
+		
+	Employee employeeone=new Employee();
+	employeeone.name="Akshay Raj";
+	employeeone.id=466133;
+	
+	Employee employeetwo =new Employee();
+	employeetwo.name="Anu";
+	employeetwo.id=466134;
+
+	System.out.println("Employee one name :"+(employeeone.name));
+	System.out.println("Employee one id :"+(employeeone.id));
+	
+	System.out.println("Employee two name :"+(employeetwo.name));
+	System.out.println("Employee two id :"+(employeetwo.id));
+		
+	}	
+}
