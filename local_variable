@@ -1,0 +1,21 @@
+public class LocalVariable{
+
+	int sum;
+void addition(int m,int n){
+	
+	int a=m;
+	int b=n;
+	sum=a+b;
+	System.out.println("sum ="+sum);
+	
+	}
+public static void main(String[] args){
+	LocalVariable v=new LocalVariable();
+	v.addition(50,50);
+	v.addition(380,380);
+
+	}
+//50,380 are actual parameters
+
+
+}
