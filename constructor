@@ -1,0 +1,27 @@
+public class Students{
+	 String name;
+	 int rollNo;
+	 
+
+	Students(String n,int no){
+	 name=n;
+	 rollNo=no;
+	}
+	
+
+	void display(){
+		System.out.println(name);
+		System.out.println(rollNo);
+		
+	}
+
+	public static void main(String[] args){
+	Students s=new Students("Akshay Raj",17);
+	s.display();
+	
+
+	
+	Students s1=new Students("Anu",25);
+	s1.display();
+	}
+}
