@@ -1,0 +1,96 @@
+package classwork;
+
+import java.util.Scanner;
+class Employee{
+	int empid,empexperience;
+	double empsalary;
+	String name,email;
+	
+	Employee(int id,double salary,int exp,String n,String mail){
+		empid=id;
+		empsalary=salary;
+		empexperience=exp;
+		name=n;
+		email=mail;
+	}
+	void display() {
+		System.out.println("Employee id :"+empid);
+		System.out.println("Employee name :"+name);
+		System.out.println("Employee salary :"+empsalary);
+		System.out.println("Employee experience :"+empexperience);
+		System.out.println("Employee email :"+email);
+
+		
+	}
+	void getBonus(){
+		if(empexperience>5) {
+			double bonus;
+			bonus=empsalary*.3;
+			empsalary=empsalary+bonus;
+			System.out.println("incremented salary :"+empsalary);
+		}
+		else {
+			System.out.println("not enough experience");
+		}
+	}
+	void getIncrement() {
+		if(empexperience>2) {
+			double bonus;
+			bonus=empsalary*.2;
+			empsalary=empsalary+bonus;
+			System.out.println("incremented salary :"+empsalary);
+		}
+		else {
+			System.out.println("not enough experience");
+		}
+	}
+	
+}
+
+public class EmployeeManagement {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int empid,empexperience;
+		double empsalary;
+		String name,email;
+		System.out.println("Enter the employee id");
+		empid=sc.nextInt();
+		System.out.println("Enter the employee salary");
+		empsalary=sc.nextDouble();
+		System.out.println("Enter the employee name");
+		name=sc.next();
+		System.out.println("Enter the employee email");
+		email=sc.next();
+		System.out.println("Enter the employee experience");
+		empexperience=sc.nextInt();
+		
+		
+		Employee emp1=new Employee(empid,empsalary,empexperience,name,email);
+	
+		System.out.println("Enter the employee id");
+		empid=sc.nextInt();
+		System.out.println("Enter the employee salary");
+		empsalary=sc.nextDouble();
+		System.out.println("Enter the employee name");
+		name=sc.next();
+		System.out.println("Enter the employee email");
+		email=sc.next();
+		System.out.println("Enter the employee experience");
+		empexperience=sc.nextInt();
+		Employee emp2=new Employee(empid,empsalary,empexperience,name,email);
+		System.out.println("****** Employee1 deatils********");
+		emp1.display();
+		emp1.getBonus();
+		emp1.getIncrement();
+		System.out.println("\n");
+		System.out.println("****** Employee2 deatils********");
+
+		emp2.display();
+		emp2.getBonus();
+		emp2.getIncrement();
+sc.close();
+		
+	}
+
+}
