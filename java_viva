@@ -1,0 +1,388 @@
+1. What is Java?
+
+Answer:
+Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems (now Oracle).
+
+2. Why is Java Platform Independent?
+
+Answer:
+Java is platform independent because Java source code is compiled into Bytecode, which runs on the JVM (Java Virtual Machine). Therefore, the same program can run on any operating system that has a JVM.
+
+3. What are the Features of Java?
+
+Answer:
+
+Platform Independent
+Object-Oriented
+Secure
+Robust
+Multithreaded
+Portable
+High Performance (using JIT)
+Simple
+4. What is JVM?
+
+Answer:
+JVM (Java Virtual Machine) is responsible for executing Java bytecode. It converts bytecode into machine code and provides platform independence.
+
+5. What is JDK?
+
+Answer:
+JDK (Java Development Kit) contains tools required to develop Java applications.
+
+It includes:
+
+JVM
+JRE
+Compiler (javac)
+6. What is JRE?
+
+Answer:
+JRE (Java Runtime Environment) provides the libraries and JVM required to run Java applications.
+
+7. Difference between JDK, JRE and JVM?
+JDK	JRE	JVM
+Development Kit	Runtime Environment	Virtual Machine
+Contains Compiler	Contains Libraries	Executes Bytecode
+Used for Development	Used for Running Programs	Converts Bytecode to Machine Code
+First Java Program
+8. Explain a Simple Java Program.
+public class Demo{
+    public static void main(String[] args){
+        System.out.println("Hello World");
+    }
+}
+
+Answer:
+
+public class Demo → Class declaration
+main() → Entry point of the program
+System.out.println() → Prints output
+9. Why is the main() method static?
+
+Answer:
+Because JVM calls the main() method without creating an object of the class.
+
+10. Why is String[] args used?
+
+Answer:
+It stores command-line arguments passed to the program.
+
+Data Types
+11. What are Data Types?
+
+Answer:
+Data types specify the type of data that a variable can store.
+
+12. Types of Data Types?
+
+Answer:
+
+Primitive
+byte
+short
+int
+long
+float
+double
+char
+boolean
+Non-Primitive
+String
+Array
+Class
+Interface
+13. Difference between int and float?
+int	float
+Stores integers	Stores decimal values
+4 bytes	4 bytes
+14. Difference between float and double?
+float	double
+4 bytes	8 bytes
+Less precision	More precision
+15. What is a Variable?
+
+Answer:
+A variable is a named memory location used to store data.
+
+Example:
+
+int age = 20;
+16. Types of Variables?
+
+Answer:
+
+Local Variable
+Instance Variable
+Static Variable
+17. What is a Local Variable?
+
+Answer:
+A variable declared inside a method is called a local variable. It can be used only within that method.
+
+18. Difference between Local and Instance Variable?
+Local	Instance
+Declared inside method	Declared inside class
+No default value	Has default value
+Scope within method	Scope within object
+Operators
+19. What are Operators?
+
+Answer:
+Operators perform operations on variables and values.
+
+20. Types of Operators?
+
+Answer:
+
+Arithmetic
+Relational
+Logical
+Assignment
+Unary
+Ternary
+Bitwise
+21. Arithmetic Operators?
+
+Answer:
+
++
+-
+*
+/
+%
+22. Relational Operators?
+
+Answer:
+
+>
+<
+>=
+<=
+==
+!=
+23. Logical Operators?
+
+Answer:
+
+&&
+||
+!
+24. Difference between == and = ?
+=	==
+Assignment	Comparison
+25. Difference between && and || ?
+
+Answer:
+
+&& → AND (both conditions must be true)
+|| → OR (at least one condition should be true)
+26. What is Ternary Operator?
+
+Answer:
+It is a shorthand for the if...else statement.
+
+Example:
+
+int max = (a > b) ? a : b;
+Scanner
+27. What is Scanner?
+
+Answer:
+Scanner is a class used to take input from the user.
+
+Scanner sc = new Scanner(System.in);
+28. Which package contains Scanner?
+
+Answer:
+
+java.util.Scanner
+29. Methods of Scanner?
+
+Answer:
+
+nextInt()
+nextFloat()
+nextDouble()
+next()
+nextLine()
+nextBoolean()
+30. Difference between next() and nextLine()?
+next()	nextLine()
+Reads one word	Reads entire line
+Conditional Statements
+31. What is if Statement?
+
+Answer:
+Executes code only if the condition is true.
+
+32. Difference between if and if...else?
+
+Answer:
+
+if → Executes only when condition is true.
+if...else → Executes one block if true and another block if false.
+33. What is Nested if?
+
+Answer:
+An if statement inside another if statement.
+
+34. What is if...else if Ladder?
+
+Answer:
+Used to test multiple conditions.
+
+Switch
+35. What is Switch Statement?
+
+Answer:
+Switch is used to execute one block among multiple choices based on the value of an expression.
+
+36. Difference between Switch and if?
+Switch	if
+Checks fixed values	Checks any condition
+Faster for many constant cases	Better for complex conditions
+37. Why do we use break in switch?
+
+Answer:
+To terminate the current case and prevent execution from continuing into the next case.
+
+38. What happens if break is omitted?
+
+Answer:
+Execution continues into the next case. This is called fall-through.
+
+Loops
+39. What is Loop?
+
+Answer:
+A loop executes a block of code repeatedly until a condition becomes false.
+
+40. Types of Loops?
+
+Answer:
+
+for
+while
+do...while
+Enhanced for (for-each)
+41. Difference between while and do...while?
+while	do...while
+Checks condition first	Executes once before checking
+42. Difference between for and while?
+
+Answer:
+
+for → Used when the number of iterations is known.
+while → Used when the number of iterations is unknown.
+43. What is Infinite Loop?
+
+Answer:
+A loop that never ends because its condition always remains true.
+
+Example:
+
+while(true){
+}
+Branching Statements
+44. What are Branching Statements?
+
+Answer:
+Branching statements change the normal flow of program execution.
+
+Types:
+
+break
+continue
+return
+45. What is break?
+
+Answer:
+Terminates the loop or switch statement immediately.
+
+46. What is continue?
+
+Answer:
+Skips the current iteration and continues with the next iteration of the loop.
+
+47. Difference between break and continue?
+break	continue
+Exits loop	Skips current iteration
+48. What is return?
+
+Answer:
+Ends the execution of a method and optionally returns a value to the caller.
+
+Frequently Asked Program Questions
+49. Write a program to check whether a number is even or odd.
+
+Logic:
+
+if(number % 2 == 0)
+50. Write a program to find the largest of three numbers.
+
+Concept Used:
+
+if...else if ladder
+51. Write a program to check whether a number is positive, negative or zero.
+
+Concept Used:
+
+if...else
+52. Write a program to print numbers from 1 to 10.
+
+Concept Used:
+
+for loop
+53. Write a program to print the multiplication table of a number.
+
+Concept Used:
+
+for loop
+54. Write a program to find the sum of the first N numbers.
+
+Concept Used:
+
+loop
+55. Write a program to reverse a number.
+
+Concept Used:
+
+while loop
+56. Write a program to check whether a number is a palindrome.
+
+Concept Used:
+
+while loop
+57. Write a program to count the digits in a number.
+
+Concept Used:
+
+while loop
+58. Write a program to swap two numbers.
+
+Methods:
+
+Using a temporary variable
+Without using a temporary variable
+59. Write a program to find the factorial of a number.
+
+Concept Used:
+
+for loop
+60. Write a program to print Fibonacci series.
+
+Concept Used:
+
+loop
+HR/Campus Interview Rapid-Fire Questions
+Why did you choose Java?
+Why is Java called platform independent?
+What is the difference between JDK, JRE, and JVM?
+What are primitive and non-primitive data types?
+What is the purpose of the main() method?
+What is the difference between next() and nextLine() in Scanner?
+When would you use switch instead of if...else?
+What is the difference between break and continue?
+What is an infinite loop?
+What are the different types of operators in Java?
