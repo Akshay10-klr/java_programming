@@ -1,6 +1,6 @@
 package firstpack;
 
-class PrivateAcess{//same package same class
+public class PrivateAcess{//same package same class
 	private int id=50;
 	String name="Akshay";
 	protected float marks=500;
