@@ -1,0 +1,50 @@
+package threadpack;
+
+class RailWay {
+	 void booking(int ticketCount) {
+		 synchronized(this) {
+		for (int i = 1; i <= 5; i++) {
+			System.out.println("try now");
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException ie) {
+				ie.printStackTrace();
+			}
+		}
+	
+		System.out.println("ticket issued "+ticketCount);
+	}
+	 }
+}
+class AkshayAcoount extends Thread{
+	RailWay obj;
+	AkshayAcoount(RailWay obj){
+		this.obj=obj;
+		
+	}
+	public void run() {
+		obj.booking(2);
+	}
+}
+class AnuAcoount extends Thread{
+	RailWay obj;
+	AnuAcoount(RailWay obj){
+		this.obj=obj;
+		
+	}
+	public void run() {
+		obj.booking(3);
+	}
+}
+public class SynchroniztionDemo {
+
+	public static void main(String[] args) {
+
+		RailWay obj=new RailWay();
+		AkshayAcoount akshay=new AkshayAcoount(obj);
+		AnuAcoount anu=new AnuAcoount(obj);
+		akshay.start();
+		anu.start();
+	}
+
+}
