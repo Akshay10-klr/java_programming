@@ -1,0 +1,69 @@
+package collectionpack;
+
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.Scanner;
+
+class Book{
+	String bookName;
+	String authorName;
+	float bookPrice;
+	public Book(String bookName, String authorName, float bookPrice) {
+		this.bookName = bookName;
+		this.authorName = authorName;
+		this.bookPrice = bookPrice;
+	}
+	
+}
+public class HashTableDemo {
+
+	public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+		int bookId;
+		String bookName;
+		String authorName;
+		float bookPrice;
+		char choice;
+		
+		Map<Integer,Book> hashTableBooks=new Hashtable<>();
+		
+		do {
+			System.out.println("Enter the book id");
+			bookId=sc.nextInt();
+			
+			sc.nextLine();
+			
+			System.out.println("Enter the book name");
+			bookName=sc.nextLine();
+			
+			System.out.println("Enter the author name");
+			authorName=sc.nextLine();
+			
+			System.out.println("Enter the book price");
+			bookPrice=sc.nextFloat();
+			
+			hashTableBooks.put(bookId, new Book(bookName,authorName,bookPrice));
+			
+			System.out.println("do you want to continue [y/n]");
+			choice=sc.next().charAt(0);
+			
+			if(choice=='Y'||choice=='y') {
+				continue;
+			}else {
+				break;
+			}
+			
+			
+		}while(true);
+			System.out.println("Bookno\tbookname\tAuthor name\tprice");
+			for(Map.Entry<Integer, Book> entry:hashTableBooks.entrySet()) {
+				int key=entry.getKey();
+				Book book=entry.getValue();
+				System.out.println(key+"\t"+book.bookName+"\t"+book.authorName+"\t"+book.bookPrice);
+			}
+			
+		
+		
+	}
+
+}
