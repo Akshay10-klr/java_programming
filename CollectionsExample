@@ -1,0 +1,28 @@
+package collectionpack;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CollectionsExample {
+
+	public static void main(String[] args) {
+
+		String[] srr = { "c#", ".Net" };
+		List<String> list = new ArrayList<>();
+		list.add("c");
+		list.add("core java");
+		list.add("advanced java");
+
+		System.out.println("list values " + list);
+		// System.out.println(Collections.addAll(list, "servlet","jsp"));
+		Collections.addAll(list, "servlet", "jsp");
+		System.out.println(list);
+		Collections.addAll(list, srr);
+		System.out.println(list);
+		Collections.sort(list);
+		System.out.println(list);
+
+	}
+
+}
