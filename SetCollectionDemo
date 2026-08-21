@@ -1,0 +1,51 @@
+package collectionpack;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetCollectionDemo {
+
+	public static void main(String[] args) {
+
+		Set<Integer> setHash=new HashSet<>();
+		Set<Integer> setLinked=new LinkedHashSet<>();
+		Set<Integer> setTree=new TreeSet<>();
+
+		setHash.add(23);
+		setHash.add(79);
+		setHash.add(6);
+		setHash.add(14);
+		setHash.add(75);
+		setHash.add(2);
+		
+		setLinked.add(23);
+		setLinked.add(79);
+		setLinked.add(6);
+		setLinked.add(14);
+		setLinked.add(75);
+		setLinked.add(2);
+		
+		setTree.add(23);
+		setTree.add(79);
+		setTree.add(6);
+		setTree.add(14);
+		setTree.add(75);
+		setTree.add(2);
+		
+		System.out.println("====================Hashset================");
+		for(Integer i:setHash) {
+			System.out.println(i);
+		}
+		System.out.println("====================LinkedHashset================");
+		for(Integer i:setLinked) {
+			System.out.println(i);
+		}
+		System.out.println("====================Treeset================");
+		for(Integer i:setTree) {
+			System.out.println(i);
+		}
+	}
+
+}
