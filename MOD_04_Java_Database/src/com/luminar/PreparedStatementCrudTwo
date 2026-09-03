@@ -1,0 +1,45 @@
+package com.luminar;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class PreparedStatementCrudTwo {
+
+	public static void main(String[] args) {
+
+		Scanner sc =new Scanner(System.in);
+		String doctorname;
+		float doctorSalary;
+		System.out.println("enter the doctor name");
+		doctorname=sc.nextLine();
+		System.out.println("enter the doctor salary");
+		doctorSalary=sc.nextFloat();
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/luminar_java", "root", "mysql");
+
+			
+			PreparedStatement pst = conn
+					.prepareStatement("insert into " + "doctors(doctor_name,doctor_salary)" + "values('"+doctorname+"',"+doctorSalary+")");
+			pst.executeUpdate();
+
+			PreparedStatement pstmt = conn.prepareStatement("select * from doctors");
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				System.out.println(rs.getInt(1) + " \t" + rs.getString(2) + "\t" + rs.getFloat(3));
+			}
+			rs.close();
+			pst.close();
+			pstmt.close();
+			conn.close();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		sc.close();
+	}
+
+}
