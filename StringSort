@@ -1,0 +1,27 @@
+package collectionsortpack;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class StringSort {
+
+	public static void main(String[] args) {
+
+		List<String> places=new ArrayList<>();
+		places.add("kochi");
+		places.add("kakkanad");
+		places.add("punalur");
+		places.add("infopark");
+		System.out.println("before sorting===================");
+		for(String str:places) {
+			System.out.println(str);
+		}
+		Collections.sort(places);
+		System.out.println("After sorting===================");
+		for(String str:places) {
+			System.out.println(str);
+		}
+	}
+
+}
