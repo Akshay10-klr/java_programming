@@ -1,0 +1,32 @@
+package collectionsortpack;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class WrapperSort {
+
+	public static void main(String[] args) {
+
+		List<Integer> mark =new ArrayList<>();
+		mark.add(100);
+		mark.add(25);
+		mark.add(99);
+		System.out.println("before sorting===================");
+		for(int str:mark) {
+			System.out.println(str);
+		}
+		
+		System.out.println("before sorting===================");
+		for(int str:mark) {
+			System.out.println(str);
+		}
+		Collections.sort(mark);
+		System.out.println("After sorting===================");
+
+		for(int str:mark) {
+			System.out.println(str);
+		}
+	}
+
+}
